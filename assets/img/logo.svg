@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-label="IntizomAI logo">
+  <defs>
+    <linearGradient id="mBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#7cc4ff"/>
+      <stop offset="45%" stop-color="#2f7dff"/>
+      <stop offset="100%" stop-color="#1749e0"/>
+    </linearGradient>
+    <linearGradient id="mBlue2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#4f9dff"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#8ed0ff" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#8ed0ff" stop-opacity=".95"/>
+      <stop offset="50%"  stop-color="#2f7dff" stop-opacity=".25"/>
+      <stop offset="82%"  stop-color="#8ed0ff" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#8ed0ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bgG" cx="50%" cy="42%" r="62%">
+      <stop offset="0%"   stop-color="#0d1a3d"/>
+      <stop offset="70%"  stop-color="#060c22"/>
+      <stop offset="100%" stop-color="#03060f"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="640" height="640" rx="150" fill="url(#bgG)"/>
+  <circle cx="320" cy="320" r="238" fill="#0a1330" opacity=".55"/>
+
+  <!-- glowing orbit ring -->
+  <circle cx="320" cy="320" r="238" fill="none" stroke="url(#ringG)" stroke-width="4"
+          transform="rotate(-28 320 320)" filter="url(#softGlow)"/>
+
+  <!-- sparkle -->
+  <g filter="url(#glow)">
+    <path d="M320 118 C331 176 349 196 404 208 C349 220 331 240 320 298 C309 240 291 220 236 208 C291 196 309 176 320 118 Z"
+          fill="#a5dcff" opacity=".97" transform="translate(0,14) scale(1)"/>
+  </g>
+
+  <!-- M mark: two thick rounded diagonal strokes -->
+  <g filter="url(#glow)">
+    <path d="M188 236 h74 a46 46 0 0 1 39 71 L246 470 a46 46 0 0 1 -83 -27 L188 236 Z"
+          fill="url(#mBlue)"/>
+    <rect x="376" y="228" width="92" height="256" rx="46" fill="url(#mBlue2)"
+          transform="rotate(24 422 356)"/>
+    <circle cx="200" cy="424" r="47" fill="url(#mBlue)"/>
+  </g>
+</svg>

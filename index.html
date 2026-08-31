@@ -1,578 +1,739 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IntizomAI — Intizom operatsion tizimi | Pitch Deck</title>
-  <meta name="description" content="IntizomAI — Gen Z uchun sun'iy intellektga asoslangan intizom operatsion tizimi. Telegram bot + Mini App: maqsadlaringizni XP, streak va AI murabbiy yordamida odatga aylantiring." />
-  <meta name="author" content="Xakimjonov Abduraxmon" />
-  <meta property="og:title" content="IntizomAI — Bilim + Intizom = Natija" />
-  <meta property="og:description" content="Sun'iy intellektga asoslangan intizom operatsion tizimi. Telegram bot + Mini App." />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IntizomAI — Pitch Deck | Intizom operatsion tizimi</title>
+<meta name="description" content="IntizomAI — Gen Z uchun sun'iy intellektga asoslangan intizom operatsion tizimi. Telegram bot + Mini App: maqsad, odat, AI murabbiy, streak va reyting bir joyda. Yoshlar Ventures uchun taqdimot." />
+<meta name="author" content="Xakimjonov Abduraxmon, Adxamov Asror" />
+<meta property="og:title" content="IntizomAI — Bilim + Intizom = Natija" />
+<meta property="og:description" content="Sun'iy intellektga asoslangan intizom operatsion tizimi. Telegram bot + Mini App." />
+<meta property="og:image" content="assets/img/logo.svg" />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#03060f" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+<link rel="apple-touch-icon" href="assets/img/logo.svg" />
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <nav class="nav" id="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top">
-        <span class="logo">🎯</span>
-        <span>Intizom<b>AI</b></span>
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#problem">Muammo</a>
-        <a href="#solution">Yechim</a>
-        <a href="#product">Mahsulot</a>
-        <a href="#market">Bozor</a>
-        <a href="#business">Biznes model</a>
-        <a href="#roadmap">Yo'l xaritasi</a>
-        <a href="#team">Jamoa</a>
-        <a class="nav-cta" href="#contact">Bog'lanish</a>
-      </div>
-      <button class="burger" id="burger" aria-label="Menu">☰</button>
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- shared SVG gradient for rings -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7cc4ff"/><stop offset="100%" stop-color="#1749e0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/img/logo.svg" alt="IntizomAI logo" />
+      <span>Intizom<b>AI</b></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#problem">Muammo</a>
+      <a href="#solution">Yechim</a>
+      <a href="#demo">Mahsulot</a>
+      <a href="#market">Bozor</a>
+      <a href="#model">Model</a>
+      <a href="#roadmap">Reja</a>
+      <a href="#team">Jamoa</a>
+      <a class="nav-cta" href="#contact">Bog'lanish</a>
     </div>
-  </nav>
+    <button class="burger" id="burger" aria-label="Menyu">☰</button>
+  </div>
+</nav>
 
-  <span id="top"></span>
+<span id="top"></span>
 
-  <!-- ===================== HERO ===================== -->
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">🚀 Startup Pitch Deck · 2026</span>
-        <h1>Maqsadlaringizni <span class="grad-text">odatga</span> aylantiruvchi sun'iy intellekt</h1>
-        <p class="lead">IntizomAI — Gen Z va o'quvchilar uchun <b>intizom operatsion tizimi</b>. Telegram bot va Mini App orqali rejalar, streaklar, XP va jonli AI murabbiy bir joyda.</p>
-        <p class="tagline"><span class="fire-text">Bilim + Intizom = Natija</span></p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#solution">Loyihani ko'rish →</a>
-          <a class="btn btn-ghost" href="#contact">Investorlar uchun</a>
-        </div>
-        <div class="hero-stats">
-          <div class="st"><b>10M+</b><span>O'zbekistonda Telegram</span></div>
-          <div class="st"><b>92%</b><span>maqsadlar tashlab yuboriladi</span></div>
-          <div class="st"><b>0 UZS</b><span>ilova o'rnatish kerak emas</span></div>
+<!-- ================= 01 · HERO ================= -->
+<header class="slide hero">
+  <div class="slide-num"><b>01</b> / 14</div>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <img class="hero-logo" src="assets/img/logo.svg" alt="IntizomAI" />
+      <span class="eyebrow">Yoshlar Ventures · Taqdimot 2026</span>
+      <h1>Maqsadni <span class="gt">odatga</span> aylantiruvchi sun'iy intellekt</h1>
+      <p class="lead">IntizomAI — o'quvchilar va yosh mutaxassislar uchun <b>intizom operatsion tizimi</b>. Telegram bot va Mini App ichida: reja, odat, maqsad, AI murabbiy, streak va jamoaviy reyting.</p>
+      <p class="tag"><span class="gold">Bilim + Intizom = Natija</span></p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#demo">▶ Mahsulotni ko'rish</a>
+        <a class="btn btn-ghost" href="#contact">Investorlar uchun</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>10M+</b><span>Telegram · O'zbekiston</span></div>
+        <div><b>7</b><span>Mini App bo'limi</span></div>
+        <div><b>100%</b><span>Mahsulot tayyor</span></div>
+      </div>
+    </div>
+
+    <!-- hero: telegram bot chat -->
+    <div class="hero-visual rv">
+      <div class="phone">
+        <div class="screen">
+          <div class="app-bar">
+            <img src="assets/img/logo.svg" alt="" />
+            <div><div class="t">Intizom AI</div><div class="s">bot · onlayn</div></div>
+          </div>
+          <div class="pages">
+            <div class="page active" style="gap:9px">
+              <div class="msg bot d1">🎯 Salom, Abduraxmon!<br/>Men — <b>Intizom AI</b>.<br/><br/>🗒 Rejangizni yozing<br/>🔔 vaqtida eslataman<br/>✅ bajarganingizni kuzataman<br/>🔥 streakingizni saqlayman</div>
+              <div class="msg me d2">🎤 Ovozli xabar · 0:04</div>
+              <div class="msg bot d3">✅ Saqlandi:<br/>📌 <b>Ingliz tili — 30 daqiqa</b> · 18:00<br/>🔥 Streak: 12 kun</div>
+              <div class="chat-input" style="margin-top:auto">
+                <span class="ic">🎤</span><span class="ph">Reja yozing yoki ayting…</span><span class="ic">➤</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</header>
 
-      <!-- Bot mockup: welcome screen -->
-      <div class="hero-visual reveal">
+<!-- ================= 02 · PROBLEM ================= -->
+<section class="slide" id="problem">
+  <div class="slide-num"><b>02</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Muammo</span>
+      <h2 class="stitle">Bilim hammada bor — <span class="gold">intizom yo'q</span></h2>
+      <p class="ssub">Yoshlar kurs sotib oladi, kitob o'qiydi, maqsad qo'yadi. Lekin ko'pchilik oxirigacha bormaydi. Muammo bilimda emas — <b>izchillikda.</b></p>
+    </div>
+    <div class="g3">
+      <div class="card rv"><div class="big red">92%</div><h3>Maqsadlar amalga oshmaydi</h3><p>Qo'yilgan maqsadlarning aksariyati bir necha haftada tashlab yuboriladi — motivatsiya tugaydi, tizim qolmaydi.</p></div>
+      <div class="card rv"><div class="big red">3 kun</div><h3>O'rtacha izchillik umri</h3><p>Reja tuzish oson, uni ushlab turish qiyin. Eslatuvchi, kuzatuvchi va rag'batlantiruvchi mexanizm yo'q.</p></div>
+      <div class="card rv"><div class="big red">0</div><h3>O'zbek tilida yechim</h3><p>Mavjud habit-tracker ilovalar inglizcha, pullik va alohida o'rnatishni talab qiladi — Gen Z uchun to'siq.</p></div>
+    </div>
+    <div class="card rv" style="margin-top:20px; background:var(--grad-soft); border-color:var(--border-strong)">
+      <p style="font-size:1.1rem">💡 <b>Asosiy tushuncha:</b> Kitob va kurslar <b>bilim</b> beradi. Bilimni <b>natijaga</b> aylantiradigan yagona narsa — intizom. IntizomAI aynan shu bo'shliqni to'ldiradi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 · SOLUTION ================= -->
+<section class="slide" id="solution">
+  <div class="slide-num"><b>03</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Yechim</span>
+      <h2 class="stitle">Har kuni takrorlanadigan <span class="gt">4 bosqichli halqa</span></h2>
+      <p class="ssub">IntizomAI sizga ma'ruza o'qimaydi — u sizni <b>harakatga olib chiqadi</b> va har kuni yoningizda bo'ladi.</p>
+    </div>
+    <div class="loop">
+      <div class="loop-step rv"><div class="num">🗒</div><h3>1. Yozing</h3><p>Ovoz yoki matn bilan ayting — AI tushunadi, vaqtini o'zi aniqlaydi.</p></div>
+      <div class="loop-step rv"><div class="num">🔔</div><h3>2. Eslataman</h3><p>Aynan vaqtida eslatma keladi. Har daqiqa tekshiriladi — hech narsa unutilmaydi.</p></div>
+      <div class="loop-step rv"><div class="num">✅</div><h3>3. Kuzataman</h3><p>Bir tugma — bajarildi. XP, ball va intizom darajangiz o'sadi.</p></div>
+      <div class="loop-step rv"><div class="num">🔥</div><h3>4. Streak</h3><p>Ketma-ket kunlar yig'iladi. Uni yo'qotmaslik — eng kuchli motivatsiya.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 · PRODUCT DEMO (Mini App) ================= -->
+<section class="slide" id="demo" style="background:linear-gradient(180deg, transparent, rgba(47,125,255,.05), transparent)">
+  <div class="slide-num"><b>04</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Mahsulot · Jonli demo</span>
+      <h2 class="stitle">Mini App — <span class="gt">7 bo'lim</span>, bitta ilovada</h2>
+      <p class="ssub">Quyida IntizomAI Mini App'ining haqiqiy bo'limlari — jonli animatsiya bilan. Bo'limlarni bosib ko'ring yoki avtomatik almashishini kuzating.</p>
+    </div>
+
+    <div class="demo-layout rv">
+      <!-- LEFT NAV -->
+      <div class="demo-side">
+        <button class="dnav on" data-go="0"><span class="di">🏠</span><span><span class="dt">Asosiy sahifa</span><span class="ds">Intizom halqasi, XP, kunlik topshiriq</span></span></button>
+        <button class="dnav" data-go="1"><span class="di">🎯</span><span><span class="dt">Maqsadlar</span><span class="ds">Yillik va oylik maqsad qo'shish</span></span></button>
+        <button class="dnav" data-go="2"><span class="di">🧠</span><span><span class="dt">AI Chat</span><span class="ds">Ma'lumotingizni biladigan murabbiy</span></span></button>
+        <button class="dnav" data-go="3"><span class="di">🔥</span><span><span class="dt">Odatlar trekeri</span><span class="ds">Kunlik odat va streak nazorati</span></span></button>
+      </div>
+
+      <!-- PHONE -->
+      <div class="device-stage">
         <div class="phone">
-          <div class="phone-screen">
-            <div class="tg-header">
-              <div class="tg-avatar">🎯</div>
-              <div>
-                <div class="tt">Intizom AI</div>
-                <div class="ts">bot · onlayn</div>
+          <div class="screen">
+            <div class="app-bar">
+              <img src="assets/img/logo.svg" alt="" />
+              <div><div class="t">IntizomAI</div><div class="s" id="pgName">Asosiy sahifa</div></div>
+              <div class="sp"><span class="chip-prem">💎 PREMIUM</span></div>
+            </div>
+
+            <div class="pages" id="pages">
+
+              <!-- ===== 0 · HOME ===== -->
+              <div class="page active">
+                <div class="mc gl">
+                  <div class="ring-box">
+                    <svg class="ring-svg" viewBox="0 0 100 100">
+                      <circle class="trk" cx="50" cy="50" r="42" fill="none" stroke-width="9"/>
+                      <circle class="val" cx="50" cy="50" r="42" fill="none" stroke-width="9"/>
+                      <text x="50" y="47" text-anchor="middle" fill="#eaf2ff" font-size="21" font-weight="800">87</text>
+                      <text x="50" y="63" text-anchor="middle" fill="#6f85b0" font-size="8">intizom</text>
+                    </svg>
+                    <div class="ring-meta">
+                      <div class="rk">💎 Intizomli</div>
+                      <div class="lv">12-daraja</div>
+                      <div class="sk">🔥 12 kun streak · rekord 21</div>
+                    </div>
+                  </div>
+                  <div class="xp-row">
+                    <div class="lbl"><span>XP</span><span>6 600 / 7 200</span></div>
+                    <div class="bar" style="--w:78%"><i></i></div>
+                  </div>
+                </div>
+
+                <div class="kpi-row">
+                  <div class="kpi"><b>4/5</b><span>BUGUN</span></div>
+                  <div class="kpi"><b>214</b><span>JAMI</span></div>
+                  <div class="kpi"><b>9</b><span>MUKAMMAL</span></div>
+                </div>
+
+                <div class="mc quest">
+                  <div class="qi">⚡</div>
+                  <div style="flex:1">
+                    <div class="qt">Kunlik topshiriq</div>
+                    <div class="qs">Yana 1 ta reja — mukammal kun! +20 XP</div>
+                    <div class="bar" style="--w:80%; margin-top:7px"><i></i></div>
+                  </div>
+                </div>
+
+                <div class="p-title">📋 Bugungi rejalar <small>4/5</small></div>
+                <div class="tsk done"><span class="cb">✓</span><span class="tn">Ertalabki mashq</span><span class="tt">07:00</span></div>
+                <div class="tsk done anim1"><span class="cb">✓</span><span class="tn">Ingliz tili — 30 daqiqa</span><span class="tt">18:00</span></div>
+                <div class="tsk anim2"><span class="cb">✓</span><span class="tn">Kitob o'qish · 20 bet</span><span class="tt">22:00</span></div>
               </div>
-            </div>
-            <div class="tg-body">
-              <div class="bubble bot">🎯 Salom, Abduraxmon!
-Men — <b>Intizom AI</b>.
 
-🗒 Rejangizni yozing
-🔔 vaqtida eslataman
-✅ bajarganingizni kuzataman
-🔥 streakingizni saqlayman
+              <!-- ===== 1 · GOALS ===== -->
+              <div class="page">
+                <div class="p-title">🎯 Maqsadlarim <small>2026</small></div>
 
-Bugundan boshlab bitta oddiy va'da: <b>har kuni kamida 1 ta narsa bajarish.</b>
-              <div class="tm">09:41</div></div>
-              <div class="bubble me">Ovozli xabar bilan reja qo'shaman 🎤
-              <div class="tm">09:41 ✓✓</div></div>
-              <div class="bubble bot">✅ Rejangiz saqlandi:
-📌 <b>Ingliz tili — 30 daqiqa</b> · 18:00
-Vaqti kelganda eslatib qo'yaman! 🔔
-              <div class="tm">09:41</div></div>
-            </div>
-            <div class="tg-input">
-              <span class="ic">🎤</span>
-              <span class="ph">Reja yozing yoki ayting…</span>
-              <span class="ic">➤</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+                <div class="mc goal">
+                  <div class="gh"><span class="ge">🎓</span><span class="gn">IELTS 7.5 olish</span><span class="gp">62%</span></div>
+                  <div class="bar" style="--w:62%"><i></i></div>
+                  <div style="font-size:.62rem;color:var(--text-dim)">Yillik maqsad · dekabr 2026</div>
+                </div>
 
-  <!-- ===================== PROBLEM ===================== -->
-  <section id="problem" class="problem">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">😞 Muammo</span>
-        <h2 class="section-title">Odamlarda bilim bor — <span class="fire-text">intizom yo'q</span></h2>
-        <p class="section-sub">Yoshlar kurslar sotib oladi, kitob o'qiydi, maqsad qo'yadi. Lekin ko'pchilik oxirigacha bormaydi. Muammo — bilimda emas, <b>izchillikda.</b></p>
-      </div>
-      <div class="grid-3">
-        <div class="card reveal">
-          <div class="stat-big red">92%</div>
-          <h3>Maqsadlar amalga oshmaydi</h3>
-          <p>Yangi yilgi va shaxsiy maqsadlarning aksariyati bir necha haftada tashlab yuboriladi — motivatsiya tugaydi.</p>
-        </div>
-        <div class="card reveal">
-          <div class="stat-big red">3 kun</div>
-          <h3>O'rtacha "streak" umri</h3>
-          <p>Reja qilish oson, izchillik qiyin. Eslatuvchi, kuzatuvchi va rag'batlantiruvchi tizim yo'q.</p>
-        </div>
-        <div class="card reveal">
-          <div class="stat-big red">0 ta</div>
-          <h3>O'zbek tilida yechim</h3>
-          <p>Mavjud habit-tracker ilovalar inglizcha, murakkab va alohida o'rnatishni talab qiladi. Gen Z uchun mos emas.</p>
-        </div>
-      </div>
-      <div class="card reveal" style="margin-top:22px; background:var(--grad-soft);">
-        <p style="font-size:1.15rem; color:var(--text);">💡 <b>Insight:</b> Kitob va kurslar <b>bilim</b> beradi. Ammo bilimni <b>natijaga</b> aylantiradigan narsa — bu intizom. Aynan shu bo'shliqni IntizomAI to'ldiradi.</p>
-      </div>
-    </div>
-  </section>
+                <div class="mc goal">
+                  <div class="gh"><span class="ge">💪</span><span class="gn">Vaznni 8 kg kamaytirish</span><span class="gp">45%</span></div>
+                  <div class="bar" style="--w:45%"><i></i></div>
+                  <div style="font-size:.62rem;color:var(--text-dim)">Yillik maqsad · 3.6 kg qoldi</div>
+                </div>
 
-  <!-- ===================== SOLUTION / LOOP ===================== -->
-  <section id="solution">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">✨ Yechim</span>
-        <h2 class="section-title">Oddiy, doimiy takrorlanuvchi <span class="grad-text">4 bosqichli halqa</span></h2>
-        <p class="section-sub">IntizomAI sizga hech narsa o'rgatmaydi — u sizni <b>harakatga majbur qiladi</b> va har kuni yoningizda bo'ladi.</p>
-      </div>
-      <div class="loop">
-        <div class="loop-step reveal">
-          <div class="num">🗒</div>
-          <h3>1. Yozing</h3>
-          <p>Ovoz yoki matn bilan rejangizni ayting — AI uni tushunadi va vaqtini aniqlaydi.</p>
-        </div>
-        <div class="loop-step reveal">
-          <div class="num">🔔</div>
-          <h3>2. Eslataman</h3>
-          <p>Aynan vaqtida eslataman — hech narsa unutilmaydi, har daqiqa tekshiriladi.</p>
-        </div>
-        <div class="loop-step reveal">
-          <div class="num">✅</div>
-          <h3>3. Kuzataman</h3>
-          <p>Bajardingizmi? Bir tugma. XP, ball va intizom darajangiz o'sib boradi.</p>
-        </div>
-        <div class="loop-step reveal">
-          <div class="num">🔥</div>
-          <h3>4. Streak</h3>
-          <p>Ketma-ket kunlar streakingizni oshiradi. Uni yo'qotmaslik — eng katta motivatsiya.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="mc goal">
+                  <div class="gh"><span class="ge">📚</span><span class="gn">Oyda 4 kitob o'qish</span><span class="gp">75%</span></div>
+                  <div class="bar" style="--w:75%"><i></i></div>
+                  <div style="font-size:.62rem;color:var(--text-dim)">Oylik maqsad · 3/4 kitob</div>
+                </div>
 
-  <!-- ===================== PRODUCT / SCREENS ===================== -->
-  <section id="product" style="background:linear-gradient(180deg, transparent, rgba(109,94,252,.04), transparent);">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">📱 Mahsulot</span>
-        <h2 class="section-title">Bot ichida ishlaydigan <span class="grad-text">to'liq tizim</span></h2>
-        <p class="section-sub">Alohida ilova o'rnatish shart emas. Hammasi Telegram ichida — o'zbek tilida, sodda va tez. Quyida botning haqiqiy ko'rinishlari.</p>
-      </div>
+                <div class="mc goal">
+                  <div class="gh"><span class="ge">💻</span><span class="gn">Python kursini tugatish</span><span class="gp">88%</span></div>
+                  <div class="bar" style="--w:88%"><i></i></div>
+                  <div style="font-size:.62rem;color:var(--text-dim)">Oylik maqsad · 2 modul qoldi</div>
+                </div>
 
-      <div class="screens">
-        <!-- Screen 1: Add plan (voice) -->
-        <div class="reveal">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="tg-header">
-                <div class="tg-avatar">🎯</div>
-                <div><div class="tt">Intizom AI</div><div class="ts">reja qo'shish</div></div>
+                <div class="add-fab">➕ Yangi maqsad qo'shish</div>
               </div>
-              <div class="tg-body">
-                <div class="bubble me">🎤 Ovozli xabar · 0:04<div class="tm">08:02 ✓✓</div></div>
-                <div class="bubble bot">🎧 Eshitdim! Rejalaringiz:
 
-1️⃣ Turnikda 10 ta tortish · 07:00
-2️⃣ Ingliz tili 30 daqiqa · 18:00
-3️⃣ Kitob o'qish · 22:00
+              <!-- ===== 2 · AI CHAT ===== -->
+              <div class="page">
+                <div class="p-title">🧠 AI Murabbiy <small>bugun 2/∞</small></div>
+                <div class="chat">
+                  <div class="msg bot d1">Salom Abduraxmon 👋 Bugun 4 ta rejadan 3 tasini bajardingiz — zo'r ketyapsiz!</div>
+                  <div class="msg me d2">Charchadim, motivatsiya yo'q 😞</div>
+                  <div class="msg bot d3">Tushunaman — 12 kunlik streak oson emas 🔥<br/><br/>Lekin statistikangizga qarang: oxirgi 30 kunda <b>87%</b> bajarish darajasi. Bu tasodif emas, bu <b>siz qurgan tizim.</b><br/><br/>Bugun katta ish qilmang. Faqat <b>20 bet kitob</b> — 15 daqiqa. Streak saqlanadi, ertaga kuchli qaytasiz. Kelishdikmi?</div>
+                  <div class="typing"><i></i><i></i><i></i></div>
+                </div>
+                <div class="chat-input"><span class="ph">Murabbiyga yozing…</span><span class="ic">➤</span></div>
+              </div>
 
-Tasdiqlaysizmi?<div class="tm">08:02</div></div>
-                <div class="tg-btns">
-                  <div class="tg-btn pri">✅ Saqlash</div>
-                  <div class="tg-btn">✏️ Tahrirlash</div>
+              <!-- ===== 3 · HABITS ===== -->
+              <div class="page">
+                <div class="p-title">🔥 Odatlar trekeri <small>oktabr</small></div>
+
+                <div class="mc hb">
+                  <span class="he">🏃</span>
+                  <div style="flex:1"><div class="hn">Ertalabki yugurish</div><div class="hs">🔥 12 kun</div></div>
+                  <div class="hx dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="tdy"></i></div>
+                </div>
+
+                <div class="mc hb">
+                  <span class="he">📖</span>
+                  <div style="flex:1"><div class="hn">Kitob o'qish</div><div class="hs">🔥 21 kun</div></div>
+                  <div class="hx dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="tdy"></i></div>
+                </div>
+
+                <div class="mc hb">
+                  <span class="he">💧</span>
+                  <div style="flex:1"><div class="hn">2 litr suv</div><div class="hs">🔥 8 kun</div></div>
+                  <div class="hx dots"><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="tdy"></i></div>
+                </div>
+
+                <div class="mc hb">
+                  <span class="he">🧘</span>
+                  <div style="flex:1"><div class="hn">Meditatsiya · 10 daq</div><div class="hs">🔥 5 kun</div></div>
+                  <div class="hx dots"><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="tdy"></i></div>
+                </div>
+
+                <div class="mc gl" style="display:flex;align-items:center;gap:10px">
+                  <span style="font-size:1.3rem">🧊</span>
+                  <div><div style="font-size:.74rem;font-weight:700">2 ta streak muzlatish</div><div style="font-size:.62rem;color:var(--text-dim)">Bir kun o'tkazsangiz — streak saqlanadi</div></div>
+                </div>
+
+                <div class="add-fab">➕ Yangi odat qo'shish</div>
+              </div>
+
+              <!-- ===== 4 · FRIENDS ===== -->
+              <div class="page">
+                <div class="p-title">👥 Do'stlar <small>Talabalar guruhi</small></div>
+
+                <div class="mc gl">
+                  <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div><div style="font-size:.74rem;font-weight:800">📈 Guruh faolligi</div><div style="font-size:.62rem;color:var(--text-dim)">bugun · 6 a'zo</div></div>
+                    <div style="font-size:1.4rem;font-weight:800" class="gt">78%</div>
+                  </div>
+                  <div class="bar" style="--w:78%;margin-top:8px"><i></i></div>
+                </div>
+
+                <div class="mc fr"><span class="av">AX</span><div style="flex:1"><div class="fn">Abduraxmon 💎</div><div class="fs">🔥 12 kun · 87 ball</div></div><span class="fb g">5/5</span></div>
+                <div class="mc fr"><span class="av">AS</span><div style="flex:1"><div class="fn">Asror 💎</div><div class="fs">🔥 18 kun · 91 ball</div></div><span class="fb g">4/4</span></div>
+                <div class="mc fr"><span class="av">SD</span><div style="flex:1"><div class="fn">Sardor</div><div class="fs">🔥 6 kun · 64 ball</div></div><span class="fb y">2/4</span></div>
+                <div class="mc fr"><span class="av">JS</span><div style="flex:1"><div class="fn">Jasur</div><div class="fs">🔥 0 kun · 38 ball</div></div><span class="fb r">0/3</span></div>
+
+                <div class="mc gl" style="display:flex;align-items:center;gap:10px">
+                  <span style="font-size:1.2rem">🎁</span>
+                  <div><div style="font-size:.72rem;font-weight:700">Do'st taklif qiling</div><div style="font-size:.62rem;color:var(--text-dim)">5 faol do'st = +7 kun bepul Premium</div></div>
                 </div>
               </div>
-              <div class="tg-input"><span class="ic">🎤</span><span class="ph">Reja yozing…</span><span class="ic">➤</span></div>
-            </div>
-          </div>
-          <div class="screen-cap">🎤 Ovozli reja<span>Whisper + GPT-4o-mini</span></div>
-        </div>
 
-        <!-- Screen 2: Reminder + complete -->
-        <div class="reveal">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="tg-header">
-                <div class="tg-avatar">🎯</div>
-                <div><div class="tt">Intizom AI</div><div class="ts">eslatma</div></div>
-              </div>
-              <div class="tg-body">
-                <div class="bubble bot">🔔 Vaqti keldi!
-📌 <b>Ingliz tili — 30 daqiqa</b>
+              <!-- ===== 5 · STATS ===== -->
+              <div class="page">
+                <div class="p-title">📊 Statistika <small>30 kun</small></div>
 
-Bajardingizmi?<div class="tm">18:00</div></div>
-                <div class="tg-row">
-                  <div class="tg-btn pri">✅ Bajardim</div>
-                  <div class="tg-btn">❌ Yo'q</div>
+                <div class="mc">
+                  <div style="font-size:.7rem;color:var(--text-dim);margin-bottom:4px">Haftalik bajarish</div>
+                  <div class="chart">
+                    <div class="cb" style="--h:52%"><span>Du</span></div>
+                    <div class="cb" style="--h:74%"><span>Se</span></div>
+                    <div class="cb" style="--h:63%"><span>Ch</span></div>
+                    <div class="cb" style="--h:88%"><span>Pa</span></div>
+                    <div class="cb" style="--h:96%"><span>Ju</span></div>
+                    <div class="cb" style="--h:70%"><span>Sh</span></div>
+                    <div class="cb" style="--h:80%"><span>Ya</span></div>
+                  </div>
                 </div>
-                <div class="bubble me">✅ Bajardim<div class="tm">18:24 ✓✓</div></div>
-                <div class="bubble bot">🔥 Zo'r! +5 XP · +5 ball
-Streak: <b>12 kun</b> 🔥
-Bugun mukammal kun bo'lishiga oz qoldi!<div class="tm">18:24</div></div>
+
+                <div class="mc">
+                  <div style="font-size:.7rem;color:var(--text-dim);margin-bottom:7px">Faollik xaritasi</div>
+                  <div class="heat" id="heat"></div>
+                </div>
+
+                <div class="kpi-row">
+                  <div class="kpi"><b class="gt">87%</b><span>BAJARISH</span></div>
+                  <div class="kpi"><b class="gt">21</b><span>REKORD</span></div>
+                  <div class="kpi"><b class="gt">11</b><span>YUTUQ</span></div>
+                </div>
+
+                <div class="p-title">🏅 So'nggi yutuqlar</div>
+                <div style="display:flex;gap:7px;flex-wrap:wrap">
+                  <span class="badge" style="font-size:.66rem;padding:6px 10px">🔥 14 kun</span>
+                  <span class="badge" style="font-size:.66rem;padding:6px 10px">🎯 100 ta</span>
+                  <span class="badge leg" style="font-size:.66rem;padding:6px 10px">✨ Mukammal</span>
+                </div>
               </div>
-              <div class="tg-input"><span class="ic">🎤</span><span class="ph">Xabar…</span><span class="ic">➤</span></div>
+
+              <!-- ===== 6 · RATING ===== -->
+              <div class="page">
+                <div class="p-title">🏆 Reyting <small>haftalik XP</small></div>
+
+                <div class="mc lb top" style="--d:.1s"><span class="pos">🥇</span><span class="av">AS</span><span class="ln">Asror A.</span><span class="lx">1 240 XP</span></div>
+                <div class="mc lb" style="--d:.2s"><span class="pos">🥈</span><span class="av">AX</span><span class="ln">Abduraxmon X.</span><span class="lx">1 180 XP</span></div>
+                <div class="mc lb" style="--d:.3s"><span class="pos">🥉</span><span class="av">MD</span><span class="ln">Madina R.</span><span class="lx">960 XP</span></div>
+                <div class="mc lb" style="--d:.4s"><span class="pos">4</span><span class="av">SD</span><span class="ln">Sardor T.</span><span class="lx">720 XP</span></div>
+                <div class="mc lb" style="--d:.5s"><span class="pos">5</span><span class="av">NG</span><span class="ln">Nigora S.</span><span class="lx">640 XP</span></div>
+                <div class="mc lb" style="--d:.6s"><span class="pos">6</span><span class="av">JS</span><span class="ln">Jasur B.</span><span class="lx">410 XP</span></div>
+
+                <div class="mc gl" style="margin-top:auto;display:flex;align-items:center;gap:10px">
+                  <span style="font-size:1.2rem">🌌</span>
+                  <div><div style="font-size:.72rem;font-weight:700">Keyingi unvon: Ustoz 🏆</div><div class="bar" style="--w:64%;margin-top:6px"><i></i></div></div>
+                </div>
+              </div>
+
+            </div><!-- /pages -->
+
+            <!-- bottom tabs -->
+            <div class="tabbar" id="tabbar">
+              <button class="on" data-go="0"><span class="ti">🏠</span>Asosiy</button>
+              <button data-go="1"><span class="ti">🎯</span>Maqsad</button>
+              <button data-go="2"><span class="ti">🧠</span>AI</button>
+              <button data-go="3"><span class="ti">🔥</span>Odat</button>
+              <button data-go="4"><span class="ti">👥</span>Do'st</button>
+              <button data-go="5"><span class="ti">📊</span>Statistika</button>
+              <button data-go="6"><span class="ti">🏆</span>Reyting</button>
             </div>
           </div>
-          <div class="screen-cap">🔔 Eslatma & bajarish<span>Har daqiqa tekshiruv</span></div>
         </div>
+        <p class="demo-hint">👆 Bo'limni tanlang — yoki <b id="autoState">avtomatik</b> almashishini kuzating</p>
+      </div>
 
-        <!-- Screen 3: Status -->
-        <div class="reveal">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="tg-header">
-                <div class="tg-avatar">🎯</div>
-                <div><div class="tt">Intizom AI</div><div class="ts">mening statusim</div></div>
-              </div>
-              <div class="tg-body">
-                <div class="bubble bot">📊 <b>Mening statusim</b>
-
-🏆 Daraja: <b>Intizomli 💎</b> (12-lvl)
-⚡ XP: 6 600 / 7 200
-🔥 Streak: <b>12 kun</b> (rekord: 21)
-🎯 Intizom balli: <b>87 / 100</b>
-✨ Mukammal kunlar: 9
-🥇 Yutuqlar: 11 ta
-✅ Jami bajarilgan: 214<div class="tm">21:10</div></div>
-                <div class="tg-btns"><div class="tg-btn pri">📈 Mini App'da ochish</div></div>
-              </div>
-              <div class="tg-input"><span class="ic">🎤</span><span class="ph">Xabar…</span><span class="ic">➤</span></div>
-            </div>
-          </div>
-          <div class="screen-cap">📊 Status & XP<span>Gamifikatsiya dvigateli</span></div>
-        </div>
-
-        <!-- Screen 4: Group leaderboard -->
-        <div class="reveal">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="tg-header">
-                <div class="tg-avatar">👥</div>
-                <div><div class="tt">Talabalar guruhi</div><div class="ts">umumiy hisobot</div></div>
-              </div>
-              <div class="tg-body">
-                <div class="bubble bot">📊 <b>IntizomAi — Bugungi hisobot</b>
-👥 Talabalar guruhi
-
-🟢 <b>To'liq bajarganlar</b>
-• Abduraxmon 💎 — 5/5
-• Sardor — 4/4
-
-🟡 <b>Chala bajarganlar</b>
-• Jasur — 2/4
-
-🔴 <b>Bajarmaganlar</b>
-• Aziz — 0/3
-
-📈 Guruh faolligi: <b>78%</b><div class="tm">21:00</div></div>
-              </div>
-              <div class="tg-input"><span class="ic">🎤</span><span class="ph">Xabar…</span><span class="ic">➤</span></div>
-            </div>
-          </div>
-          <div class="screen-cap">👥 Jamoaviy intizom<span>Guruh reytingi</span></div>
+      <!-- RIGHT NAV -->
+      <div class="demo-side right">
+        <button class="dnav" data-go="4"><span class="di">👥</span><span><span class="dt">Do'stlar bo'limi</span><span class="ds">Jamoaviy intizom va guruh faolligi</span></span></button>
+        <button class="dnav" data-go="5"><span class="di">📊</span><span><span class="dt">Statistika</span><span class="ds">Grafik, faollik xaritasi, yutuqlar</span></span></button>
+        <button class="dnav" data-go="6"><span class="di">🏆</span><span><span class="dt">Reyting</span><span class="ds">Haftalik XP bo'yicha musobaqa</span></span></button>
+        <div class="mc" style="padding:14px 15px;border-radius:14px">
+          <div style="font-size:.8rem;font-weight:800;margin-bottom:6px">➕ Va yana</div>
+          <div style="font-size:.72rem;color:var(--text-dim);line-height:1.5">Ovozli reja qo'shish · kalendar · kayfiyat kundaligi · 6 mavzu · dark mode · yutuq modali</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== FEATURES ===================== -->
-  <section id="features">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">⚙️ Imkoniyatlar</span>
-        <h2 class="section-title">Bir botda — <span class="grad-text">butun ekotizim</span></h2>
-        <p class="section-sub">Har bir funksiya izchillikni oshirishga va foydalanuvchini ushlab turishga qaratilgan.</p>
+<!-- ================= 05 · FEATURES ================= -->
+<section class="slide" id="features">
+  <div class="slide-num"><b>05</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Imkoniyatlar</span>
+      <h2 class="stitle">Bitta botda — <span class="gt">butun ekotizim</span></h2>
+      <p class="ssub">Har bir funksiya bitta maqsadga qaratilgan: foydalanuvchi ertaga ham qaytib kelsin.</p>
+    </div>
+    <div class="g3">
+      <div class="card rv"><div class="ic">🎤</div><h3>Ovozli & matnli reja</h3><p>Whisper ovozni matnga, GPT-4o-mini tabiiy tildan rejaga aylantiradi. uz/ru/en/tr tillarni tushunadi.</p></div>
+      <div class="card rv"><div class="ic">⏰</div><h3>Aqlli vaqt tahlili</h3><p>"30 daqiqadan keyin", "ertaga 7 da" — tabiiy iboralarni aniq vaqtga o'giradi.</p></div>
+      <div class="card rv"><div class="ic">🧠</div><h3>Jonli AI murabbiy</h3><p>Sizning haqiqiy statistikangizga asoslanadi. Ma'lumot to'qib chiqarmaydi, faqat faktga tayanadi.</p></div>
+      <div class="card rv"><div class="ic">🔥</div><h3>Streak & muzlatish</h3><p>Ketma-ket kunlar + "freeze" tokenlari bir kunlik xatoni kechiradi — foydalanuvchi taslim bo'lmaydi.</p></div>
+      <div class="card rv"><div class="ic">🏆</div><h3>Daraja va unvonlar</h3><p>Boshlovchi 🌱 dan Mifik 🌌 gacha 8 unvon. XP egri chizig'i: boshda tez, keyin qiyinroq.</p></div>
+      <div class="card rv"><div class="ic">🎯</div><h3>Intizom balli 0–100</h3><p>30 kunlik bajarish, streak, faollik va tanaffus jazosidan hisoblanadigan yagona ko'rsatkich.</p></div>
+      <div class="card rv"><div class="ic">👥</div><h3>Jamoaviy intizom</h3><p>Do'stlar guruhi + Telegram guruh hisoboti. Kim bajardi, kim yo'q — hamma ko'radi.</p></div>
+      <div class="card rv"><div class="ic">📲</div><h3>Mini App · 7 bo'lim</h3><p>Halqa, maqsad, AI chat, odat, do'stlar, statistika, reyting — hammasi Telegram ichida.</p></div>
+      <div class="card rv"><div class="ic">🎁</div><h3>Referal tizimi</h3><p>5 faol do'st = +7 kun bepul Premium. Bepul Premiumning yagona yo'li — viral o'sish dvigateli.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 · GAMIFICATION ================= -->
+<section class="slide" style="background:linear-gradient(180deg, transparent, rgba(124,196,255,.05), transparent)">
+  <div class="slide-num"><b>06</b> / 14</div>
+  <div class="wrap g2" style="align-items:center;gap:44px">
+    <div class="rv">
+      <span class="eyebrow">Retention dvigateli</span>
+      <h2 class="stitle">Odat qilish uchun <span class="gold">o'yin mexanikasi</span></h2>
+      <p class="ssub">Foydalanuvchi ketmasligining asosiy sababi — mehnat bilan yiqqan streagi va darajasini yo'qotishni istamasligi. Bu bizning eng kuchli ushlab turish quroli.</p>
+      <div style="margin-bottom:18px">
+        <div style="display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:7px"><span>💎 Intizomli · 12-daraja</span><span>6 600 / 7 200 XP</span></div>
+        <div class="bar" style="height:12px"><i style="width:78%"></i></div>
       </div>
-      <div class="grid-3">
-        <div class="card reveal"><div class="ic">🎤</div><h3>Ovozli & matnli reja</h3><p>Whisper bilan ovozni matnga, GPT-4o-mini bilan tabiiy tildan rejaga aylantiradi. uz/ru/en/tr tillarni tushunadi.</p></div>
-        <div class="card reveal"><div class="ic">⏰</div><h3>Aqlli vaqt tahlili</h3><p>"30 daqiqadan keyin", "ertaga 7 da" kabi tabiiy iboralarni aniq vaqtga aylantiradi.</p></div>
-        <div class="card reveal"><div class="ic">🧠</div><h3>Jonli AI murabbiy</h3><p>Sizning haqiqiy ma'lumotlaringizga asoslangan psixolog-motivator. Ma'lumot to'qib chiqarmaydi.</p></div>
-        <div class="card reveal"><div class="ic">🔥</div><h3>Streak & muzlatish</h3><p>Ketma-ket kunlar streagi + "streak freeze" tokenlari bir kunlik xatoni kechiradi.</p></div>
-        <div class="card reveal"><div class="ic">🏆</div><h3>Daraja & unvonlar</h3><p>Boshlovchi 🌱 dan Mifik 🌌 gacha. XP egri chizig'i: boshda tez, keyin qiyinroq.</p></div>
-        <div class="card reveal"><div class="ic">🎯</div><h3>Intizom balli 0–100</h3><p>30 kunlik bajarish darajasi, streak, faollik va tanaffus jazosidan hisoblanadi.</p></div>
-        <div class="card reveal"><div class="ic">👥</div><h3>Jamoaviy intizom</h3><p>Do'stlar guruhi + Telegram guruh reytingi. Kim bajardi, kim yo'q — hamma ko'radi.</p></div>
-        <div class="card reveal"><div class="ic">📲</div><h3>Mini App</h3><p>Intizom halqasi, kalendar, statistika, kayfiyat kundaligi, 6 mavzu va dark mode.</p></div>
-        <div class="card reveal"><div class="ic">🎁</div><h3>Referal tizimi</h3><p>5 ta faol do'st taklif qiling — +7 kun bepul Premium. Bepul Premiumning yagona yo'li.</p></div>
+      <div class="rank-ladder">
+        <span class="rank-chip">🌱 Boshlovchi</span>
+        <span class="rank-chip">🔰 O'rganuvchi</span>
+        <span class="rank-chip">⚡ Faol</span>
+        <span class="rank-chip">🔥 Izchil</span>
+        <span class="rank-chip">💎 Intizomli</span>
+        <span class="rank-chip">🏆 Ustoz</span>
+        <span class="rank-chip">👑 Afsona</span>
+        <span class="rank-chip last">🌌 Mifik</span>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== GAMIFICATION DEEP ===================== -->
-  <section style="background:linear-gradient(180deg, transparent, rgba(244,114,182,.04), transparent);">
-    <div class="wrap grid-2" style="align-items:center; gap:48px;">
-      <div class="reveal">
-        <span class="eyebrow">🎮 Retention dvigateli</span>
-        <h2 class="section-title">Odat qilish uchun <span class="fire-text">o'yin mexanikasi</span></h2>
-        <p class="section-sub">Foydalanuvchi ketmasligining sababi — u qiynalayotgan streagi va darajasini yo'qotishni istamaydi. Bu bizning asosiy ushlab turish (retention) qurolimiz.</p>
-        <div class="game-visual">
+    <div class="rv">
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:20px;margin-bottom:18px">
+          <svg width="118" height="118" viewBox="0 0 120 120" style="flex:none">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(125,180,255,.1)" stroke-width="12"/>
+            <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="12" stroke-linecap="round"
+              stroke-dasharray="326" stroke-dashoffset="42" transform="rotate(-90 60 60)"/>
+            <text x="60" y="56" text-anchor="middle" fill="#eaf2ff" font-size="26" font-weight="800">87</text>
+            <text x="60" y="76" text-anchor="middle" fill="#6f85b0" font-size="10">Intizom balli</text>
+          </svg>
           <div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:.9rem;"><span>Intizomli 💎 · 12-daraja</span><span>6 600 / 7 200 XP</span></div>
-            <div class="progress"><i style="width:78%"></i></div>
-          </div>
-          <div class="rank-ladder">
-            <span class="rank-chip">🌱 Boshlovchi</span>
-            <span class="rank-chip">⚡ Faol</span>
-            <span class="rank-chip">🔥 Izchil</span>
-            <span class="rank-chip">💎 Intizomli</span>
-            <span class="rank-chip">🏆 Ustoz</span>
-            <span class="rank-chip">🌌 Mifik</span>
-          </div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="card">
-          <div class="ring-wrap">
-            <svg class="ring" viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12"/>
-              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"
-                stroke-dasharray="326" stroke-dashoffset="42" transform="rotate(-90 60 60)"/>
-              <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d5efc"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-              <text x="60" y="56" text-anchor="middle" fill="#eef2ff" font-size="26" font-weight="800">87</text>
-              <text x="60" y="76" text-anchor="middle" fill="#7d88ad" font-size="10">Intizom balli</text>
-            </svg>
-            <div>
-              <h3 style="margin-bottom:8px;">15 ta yutuq · 4 darajali</h3>
-              <div class="badges">
-                <span class="badge">🌱 Birinchi qadam</span>
-                <span class="badge">🔥 30 kun streak</span>
-                <span class="badge">🎯 100 ta bajarildi</span>
-                <span class="badge leg">👑 Afsona</span>
-              </div>
+            <h3 style="margin-bottom:8px">15 yutuq · 4 darajali</h3>
+            <div class="badges">
+              <span class="badge">🌱 Birinchi qadam</span>
+              <span class="badge">🔥 30 kun</span>
+              <span class="badge">🎯 100 ta</span>
+              <span class="badge leg">👑 Afsona</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== MARKET ===================== -->
-  <section id="market">
-    <div class="wrap grid-2" style="align-items:center; gap:48px;">
-      <div class="reveal">
-        <span class="eyebrow">📈 Bozor</span>
-        <h2 class="section-title">Katta va o'sib borayotgan <span class="grad-text">bozor</span></h2>
-        <p class="section-sub">O'zbekistonda Telegram — asosiy platforma. Yoshlar ulushi yuqori. Bu bizga nol o'rnatish to'sig'i bilan millionlab foydalanuvchiga yetish imkonini beradi.</p>
-        <div class="tam-wrap">
-          <div class="tam-bar"><span class="lbl grad-text">TAM</span><div class="bar tam">O'zbekistonda ~10M+ Telegram foydalanuvchisi</div></div>
-          <div class="tam-bar"><span class="lbl grad-text">SAM</span><div class="bar sam">~4M o'quvchi, talaba va yosh mutaxassis</div></div>
-          <div class="tam-bar"><span class="lbl grad-text">SOM</span><div class="bar som">Dastlabki 3 yilda 150K+ faol foydalanuvchi</div></div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="grid-2" style="gap:16px;">
-          <div class="card"><div class="stat-big grn">70%</div><p>Telegram auditoriyasi — 35 yoshgacha</p></div>
-          <div class="card"><div class="stat-big grn">$0</div><p>Foydalanuvchi uchun o'rnatish xarajati</p></div>
-          <div class="card"><div class="stat-big grn">uz</div><p>To'liq o'zbek tilida — mahalliy raqobat kam</p></div>
-          <div class="card"><div class="stat-big grn">B2B2C</div><p>Maktab, kurs va guruhlar orqali kengayish</p></div>
+        <div class="g2" style="gap:12px">
+          <div class="metric-row"><span class="k">XP formulasi</span><span class="v" style="font-size:.9rem">50·(n−1)·n</span></div>
+          <div class="metric-row"><span class="k">Muzlatish</span><span class="v" style="font-size:.9rem">🧊 max 2</span></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== BUSINESS MODEL ===================== -->
-  <section id="business" style="background:linear-gradient(180deg, transparent, rgba(109,94,252,.04), transparent);">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">💰 Biznes model</span>
-        <h2 class="section-title">Freemium <span class="grad-text">obuna</span> modeli</h2>
-        <p class="section-sub">Bepul reja bilan boshlanadi, cheklovga yetganda Premiumga o'tadi. To'lovlar Paylov orqali. Referal — bepul Premiumning yagona yo'li (viral o'sish).</p>
-      </div>
-      <div class="price-grid">
-        <div class="card price-card reveal">
-          <h3>1 oy</h3>
-          <div class="amt">39 900 <small>so'm</small></div>
-          <ul>
-            <li>Cheksiz reja va odat</li>
-            <li>Cheksiz AI murabbiy</li>
-            <li>Mini App — to'liq</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact" style="margin-top:auto;">Standart</a>
-        </div>
-        <div class="card price-card featured reveal">
-          <span class="tag">⭐ 33% tejaysiz</span>
-          <h3>3 oy</h3>
-          <div class="amt">79 900 <small>so'm</small></div>
-          <ul>
-            <li>Barcha Premium imkoniyatlar</li>
-            <li>Guruh reytingi (jamoaviy)</li>
-            <li>Statistika va heatmap</li>
-          </ul>
-          <a class="btn btn-primary" href="#contact" style="margin-top:auto;">Eng ommabop</a>
-        </div>
-        <div class="card price-card reveal">
-          <span class="tag" style="background:var(--grad);color:#fff;">💎 ≈ 14 990/oy</span>
-          <h3>12 oy</h3>
-          <div class="amt">179 900 <small>so'm</small></div>
-          <ul>
-            <li>Eng arzon oylik narx</li>
-            <li>Barcha kelajakdagi funksiyalar</li>
-            <li>Ustuvor qo'llab-quvvatlash</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact" style="margin-top:auto;">Yillik</a>
-        </div>
-      </div>
-
-      <div class="grid-3" style="margin-top:28px;">
-        <div class="card reveal"><div class="ic">🆓</div><h3>Bepul daraja</h3><p>Kuniga 5 reja, 3 maqsad, 3 odat, 3 AI suhbat. Sinab ko'rish uchun yetarli — keyin paywall.</p></div>
-        <div class="card reveal"><div class="ic">🔄</div><h3>Viral o'sish</h3><p>Referal orqali bepul Premium → foydalanuvchilar do'stlarini o'zi taklif qiladi. Past CAC.</p></div>
-        <div class="card reveal"><div class="ic">🏫</div><h3>B2B kengayish</h3><p>Kelajakda maktab/kurslarga guruh litsenziyalari — barqaror B2B daromad.</p></div>
+<!-- ================= 07 · MARKET ================= -->
+<section class="slide" id="market">
+  <div class="slide-num"><b>07</b> / 14</div>
+  <div class="wrap g2" style="align-items:center;gap:44px">
+    <div class="rv">
+      <span class="eyebrow">Bozor</span>
+      <h2 class="stitle">Katta va <span class="gt">o'sib borayotgan</span> bozor</h2>
+      <p class="ssub">O'zbekistonda Telegram — birinchi platforma va yoshlar ulushi juda yuqori. Bu bizga <b>nol o'rnatish to'sig'i</b> bilan millionlab foydalanuvchiga yetish imkonini beradi.</p>
+      <div class="tam-wrap">
+        <div class="tam-bar"><span class="lbl gt">TAM</span><div class="bar2 t1">~10M+ Telegram foydalanuvchisi</div></div>
+        <div class="tam-bar"><span class="lbl gt">SAM</span><div class="bar2 t2">~4M o'quvchi, talaba, yosh mutaxassis</div></div>
+        <div class="tam-bar"><span class="lbl gt">SOM</span><div class="bar2 t3">3 yilda 150K+ faol foydalanuvchi</div></div>
       </div>
     </div>
-  </section>
+    <div class="rv">
+      <div class="g2" style="gap:15px">
+        <div class="card"><div class="big grn">~70%</div><p>Telegram auditoriyasi 35 yoshgacha</p></div>
+        <div class="card"><div class="big grn">0 UZS</div><p>Foydalanuvchi uchun o'rnatish xarajati</p></div>
+        <div class="card"><div class="big grn">uz</div><p>To'liq o'zbek tilida — mahalliy raqobat yo'q</p></div>
+        <div class="card"><div class="big grn">B2B2C</div><p>Maktab, kurs va guruhlar orqali kengayish</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ===================== TECH / MOAT ===================== -->
-  <section>
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">🛠 Texnologiya & ustunlik</span>
-        <h2 class="section-title">Ishlab chiqilgan va <span class="grad-text">ishlaydigan</span> mahsulot</h2>
-        <p class="section-sub">Bu shunchaki g'oya emas — to'liq ishlaydigan, deploy qilingan tizim. Bu bizning eng katta ustunligimiz.</p>
+<!-- ================= 08 · BUSINESS MODEL ================= -->
+<section class="slide" id="model" style="background:linear-gradient(180deg, transparent, rgba(47,125,255,.05), transparent)">
+  <div class="slide-num"><b>08</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Biznes model</span>
+      <h2 class="stitle">Freemium <span class="gt">obuna</span> modeli</h2>
+      <p class="ssub">Bepul boshlanadi, cheklovga yetganda Premiumga o'tadi. To'lovlar Paylov orqali (Payme, Click, Uzum, karta). Referal — bepul Premiumning yagona yo'li.</p>
+    </div>
+    <div class="price-grid">
+      <div class="card pc rv">
+        <h3>1 oy</h3><div class="amt">39 900 <small>so'm</small></div>
+        <ul><li>Cheksiz reja va odat</li><li>Cheksiz AI murabbiy</li><li>Mini App — to'liq</li></ul>
+        <span class="btn btn-ghost" style="margin-top:auto;justify-content:center">Standart</span>
       </div>
-      <div class="grid-4">
-        <div class="card reveal"><div class="ic">🤖</div><h3>aiogram 3</h3><p>Zamonaviy Telegram bot freymvorki, asinxron.</p></div>
-        <div class="card reveal"><div class="ic">⚡</div><h3>FastAPI</h3><p>Mini App backend + bot bir jarayonda.</p></div>
-        <div class="card reveal"><div class="ic">🧠</div><h3>OpenAI</h3><p>Whisper (ovoz) + GPT-4o-mini (reja & murabbiy).</p></div>
-        <div class="card reveal"><div class="ic">🗄</div><h3>PostgreSQL</h3><p>SQLAlchemy async — 100K+ foydalanuvchiga tayyor.</p></div>
+      <div class="card pc feat rv">
+        <span class="tg2">⭐ 33% TEJAYSIZ</span>
+        <h3>3 oy</h3><div class="amt">79 900 <small>so'm</small></div>
+        <ul><li>Barcha Premium imkoniyat</li><li>Guruh hisoboti (jamoaviy)</li><li>Statistika va faollik xaritasi</li></ul>
+        <span class="btn btn-primary" style="margin-top:auto;justify-content:center">Eng ommabop</span>
       </div>
-      <div class="card reveal" style="margin-top:22px;">
-        <h3 style="margin-bottom:12px;">Nima bizni himoya qiladi (moat)</h3>
-        <div class="pill-row">
-          <span class="pill">📊 Foydalanuvchi ma'lumotidan o'rganuvchi AI</span>
-          <span class="pill">🔥 Streak = yuqori almashtirish narxi</span>
+      <div class="card pc rv">
+        <span class="tg2" style="background:var(--grad);color:#fff">💎 ≈14 990/oy</span>
+        <h3>12 oy</h3><div class="amt">179 900 <small>so'm</small></div>
+        <ul><li>Eng arzon oylik narx</li><li>Kelajakdagi barcha funksiya</li><li>Ustuvor qo'llab-quvvatlash</li></ul>
+        <span class="btn btn-ghost" style="margin-top:auto;justify-content:center">Yillik</span>
+      </div>
+    </div>
+    <div class="g3" style="margin-top:20px">
+      <div class="card rv"><div class="ic">🆓</div><h3>Bepul daraja</h3><p>Kuniga 5 reja, 3 maqsad, 3 odat, 3 AI suhbat — sinash uchun yetarli, keyin paywall.</p></div>
+      <div class="card rv"><div class="ic">🔄</div><h3>Viral o'sish</h3><p>Referal orqali bepul Premium → foydalanuvchi do'stini o'zi olib keladi. Past jalb narxi (CAC).</p></div>
+      <div class="card rv"><div class="ic">🏫</div><h3>B2B kengayish</h3><p>Maktab va o'quv markazlariga guruh litsenziyasi — barqaror, yiriklashadigan daromad.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 · COMPETITION ================= -->
+<section class="slide">
+  <div class="slide-num"><b>09</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Raqobat</span>
+      <h2 class="stitle">Nima uchun <span class="gt">biz g'olib bo'lamiz</span></h2>
+      <p class="ssub">Global ilovalar bor, lekin O'zbekiston yoshlari uchun to'siqlari ham bor. Biz aynan shu to'siqlarni olib tashladik.</p>
+    </div>
+    <div class="tbl-wrap rv">
+      <table>
+        <thead><tr><th>Xususiyat</th><th>IntizomAI</th><th>Habitica / Notion</th><th>Oddiy eslatma</th></tr></thead>
+        <tbody>
+          <tr class="tr-hl"><td>O'zbek tili</td><td class="yes">✓ To'liq</td><td class="no">✗</td><td class="no">✗</td></tr>
+          <tr><td>Ilova o'rnatish shart</td><td class="yes">✗ Shart emas</td><td>Talab qiladi</td><td>Talab qiladi</td></tr>
+          <tr class="tr-hl"><td>Ovozli reja qo'shish</td><td class="yes">✓ AI bilan</td><td class="no">✗</td><td class="no">✗</td></tr>
+          <tr><td>Shaxsiy AI murabbiy</td><td class="yes">✓ Ma'lumotga asoslangan</td><td class="no">✗</td><td class="no">✗</td></tr>
+          <tr class="tr-hl"><td>Jamoaviy hisobot</td><td class="yes">✓ Telegram guruhda</td><td>Cheklangan</td><td class="no">✗</td></tr>
+          <tr><td>Mahalliy to'lov (Payme/Click)</td><td class="yes">✓</td><td class="no">✗</td><td>—</td></tr>
+          <tr class="tr-hl"><td>Narx</td><td class="yes">39 900 so'm</td><td>$5–10 (valyuta)</td><td>Bepul</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="g3" style="margin-top:20px">
+      <div class="card rv"><div class="ic">🛡</div><h3>Ma'lumot ustunligi</h3><p>Foydalanuvchi qancha uzoq qolsa, AI uni shuncha yaxshi biladi — raqibga o'tish qiyinlashadi.</p></div>
+      <div class="card rv"><div class="ic">🔗</div><h3>Tarmoq effekti</h3><p>Guruhlar va do'stlar tizimi: bitta foydalanuvchi butun sinfni olib keladi.</p></div>
+      <div class="card rv"><div class="ic">🔥</div><h3>Yuqori almashtirish narxi</h3><p>21 kunlik streak va 12-daraja — foydalanuvchi buni tashlab ketmaydi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10 · TECH / TRACTION ================= -->
+<section class="slide" style="background:linear-gradient(180deg, transparent, rgba(124,196,255,.04), transparent)">
+  <div class="slide-num"><b>10</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Holat & Texnologiya</span>
+      <h2 class="stitle">G'oya emas — <span class="gt">ishlaydigan mahsulot</span></h2>
+      <p class="ssub">Bot, Mini App, AI, to'lov tizimi, guruh moduli — barchasi yozilgan, test qilingan va serverga joylashtirilgan.</p>
+    </div>
+    <div class="g4">
+      <div class="card rv"><div class="ic">🤖</div><h3>aiogram 3</h3><p>Zamonaviy asinxron Telegram bot freymvorki.</p></div>
+      <div class="card rv"><div class="ic">⚡</div><h3>FastAPI</h3><p>Mini App backend + bot bitta jarayonda.</p></div>
+      <div class="card rv"><div class="ic">🧠</div><h3>OpenAI</h3><p>Whisper (ovoz) + GPT-4o-mini (reja, murabbiy).</p></div>
+      <div class="card rv"><div class="ic">🗄</div><h3>PostgreSQL</h3><p>SQLAlchemy async — 100K+ foydalanuvchiga tayyor.</p></div>
+    </div>
+    <div class="g2" style="margin-top:20px">
+      <div class="card rv">
+        <h3 style="margin-bottom:13px">✅ Allaqachon bajarilgan</h3>
+        <div class="pill-row left">
+          <span class="pill">✅ Telegram bot (to'liq)</span>
+          <span class="pill">✅ Mini App · 7 bo'lim</span>
+          <span class="pill">✅ AI reja + murabbiy</span>
+          <span class="pill">✅ Gamifikatsiya dvigateli</span>
+          <span class="pill">✅ Paylov to'lov integratsiyasi</span>
+          <span class="pill">✅ Guruh hisobotlari</span>
+          <span class="pill">✅ Referal tizimi</span>
+          <span class="pill">✅ Admin panel</span>
+          <span class="pill">✅ Serverga deploy</span>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3 style="margin-bottom:13px">🛡 Bizni himoya qiladigan omillar</h3>
+        <div class="pill-row left">
+          <span class="pill">📊 O'rganuvchi AI konteksti</span>
+          <span class="pill">🔥 Streak = sadoqat</span>
           <span class="pill">🇺🇿 To'liq lokalizatsiya</span>
-          <span class="pill">👥 Tarmoq effekti (guruhlar)</span>
+          <span class="pill">👥 Guruh tarmoq effekti</span>
           <span class="pill">🎁 Referal viral halqasi</span>
-          <span class="pill">🛡 Telegram HMAC xavfsizligi</span>
+          <span class="pill">🔐 Telegram HMAC xavfsizligi</span>
+          <span class="pill">💳 Mahalliy to'lovlar</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== ROADMAP ===================== -->
-  <section id="roadmap" style="background:linear-gradient(180deg, transparent, rgba(34,211,238,.04), transparent);">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">🗺 Yo'l xaritasi</span>
-        <h2 class="section-title">Qayerdamiz va <span class="grad-text">qayerga boramiz</span></h2>
-        <p class="section-sub">Mahsulot tayyor. Endi o'sish, jamoa va bozorga chiqish bosqichi.</p>
-      </div>
-      <div class="timeline">
-        <div class="tl-item done reveal"><div class="q">✅ Bajarildi<span>MVP</span></div><div><h3>To'liq mahsulot ishlab chiqildi</h3><p>Bot + Mini App + AI + gamifikatsiya + to'lov + guruh tizimi tayyor va deploy qilingan.</p></div></div>
-        <div class="tl-item reveal"><div class="q">Q3 2026<span>Bosqich 1</span></div><div><h3>Foydalanuvchi bazasini oshirish</h3><p>Marketing, kontent, blogerlar va referal kampaniyalari orqali dastlabki 10K+ faol foydalanuvchi.</p></div></div>
-        <div class="tl-item reveal"><div class="q">Q4 2026<span>Bosqich 2</span></div><div><h3>Premium konversiyasini optimallashtirish</h3><p>Paywall va AI murabbiyni takomillashtirish, A/B testlar, monetizatsiyani kuchaytirish.</p></div></div>
-        <div class="tl-item reveal"><div class="q">2027<span>Bosqich 3</span></div><div><h3>B2B va maktablar</h3><p>Ta'lim muassasalari uchun guruh litsenziyalari, o'qituvchi paneli va hisobotlar.</p></div></div>
-        <div class="tl-item reveal"><div class="q">2027+<span>Bosqich 4</span></div><div><h3>Mintaqaviy kengayish</h3><p>Qozog'iston, Tojikiston va boshqa mintaqalarga ko'p tilli versiya bilan chiqish.</p></div></div>
+<!-- ================= 11 · ROADMAP ================= -->
+<section class="slide" id="roadmap">
+  <div class="slide-num"><b>11</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Yo'l xaritasi</span>
+      <h2 class="stitle">Qayerdamiz va <span class="gt">qayerga boramiz</span></h2>
+      <p class="ssub">Mahsulot tayyor. Endi o'sish, jamoa va bozorga chiqish bosqichi boshlanadi.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item done rv"><div class="q">✅ Bajarildi<span>MVP · 2026</span></div><div><h3>To'liq mahsulot ishlab chiqildi</h3><p>Bot + Mini App + AI + gamifikatsiya + to'lov + guruh tizimi yozildi va serverga joylandi.</p></div></div>
+      <div class="tl-item rv"><div class="q">Q4 2026<span>Bosqich 1</span></div><div><h3>Dastlabki 10 000 foydalanuvchi</h3><p>Marketing, kontent, blogerlar va referal kampaniyalari. Maktab va o'quv markazlari bilan pilot.</p></div></div>
+      <div class="tl-item rv"><div class="q">Q1–Q2 2027<span>Bosqich 2</span></div><div><h3>Konversiyani optimallashtirish</h3><p>Paywall va AI murabbiyni takomillashtirish, A/B testlar, Premium ulushini oshirish.</p></div></div>
+      <div class="tl-item rv"><div class="q">Q3–Q4 2027<span>Bosqich 3</span></div><div><h3>B2B va ta'lim muassasalari</h3><p>Maktab/kurslar uchun guruh litsenziyasi, o'qituvchi paneli, ota-ona hisobotlari.</p></div></div>
+      <div class="tl-item rv"><div class="q">2028+<span>Bosqich 4</span></div><div><h3>Mintaqaviy kengayish</h3><p>Qozog'iston, Tojikiston, Qirg'iziston — ko'p tilli versiya bilan chiqish.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12 · ASK / USE OF FUNDS ================= -->
+<section class="slide" style="background:linear-gradient(180deg, transparent, rgba(47,125,255,.05), transparent)">
+  <div class="slide-num"><b>12</b> / 14</div>
+  <div class="wrap g2" style="align-items:center;gap:44px">
+    <div class="rv">
+      <span class="eyebrow">So'rov</span>
+      <h2 class="stitle">Yoshlar Ventures bilan <span class="gt">birga</span></h2>
+      <p class="ssub">Mahsulot tayyor — endi masshtab kerak. Investitsiya foydalanuvchi jalb qilish, jamoa va infratuzilmaga yo'naltiriladi.</p>
+      <div id="funds">
+        <div class="fund-row" style="--p:40%"><span class="fl">📣 Marketing va jalb</span><span class="fbar"><i></i></span><span class="fp">40%</span></div>
+        <div class="fund-row" style="--p:25%"><span class="fl">👥 Jamoa kengaytirish</span><span class="fbar"><i></i></span><span class="fp">25%</span></div>
+        <div class="fund-row" style="--p:20%"><span class="fl">☁️ Server & AI xarajat</span><span class="fbar"><i></i></span><span class="fp">20%</span></div>
+        <div class="fund-row" style="--p:15%"><span class="fl">🏫 B2B sotuvlar</span><span class="fbar"><i></i></span><span class="fp">15%</span></div>
       </div>
     </div>
-  </section>
+    <div class="rv">
+      <div class="metric-list">
+        <div class="metric-row"><span class="k">Mahsulot holati</span><span class="v gt">Tayyor & ishlayapti</span></div>
+        <div class="metric-row"><span class="k">Maqsadli bozor</span><span class="v">4M+ yoshlar</span></div>
+        <div class="metric-row"><span class="k">Obuna narxi</span><span class="v">39 900 so'm/oy</span></div>
+        <div class="metric-row"><span class="k">3 yillik maqsad</span><span class="v">150K foydalanuvchi</span></div>
+        <div class="metric-row"><span class="k">Jalb narxi (CAC)</span><span class="v gt">Past · viral</span></div>
+        <div class="metric-row"><span class="k">O'rnatish to'sig'i</span><span class="v">0 · Telegram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ===================== ASK / METRICS ===================== -->
-  <section>
-    <div class="wrap grid-2" style="align-items:center; gap:48px;">
-      <div class="reveal">
-        <span class="eyebrow">🎯 So'rov</span>
-        <h2 class="section-title">Yoshlar Venture Fund bilan <span class="grad-text">birga</span></h2>
-        <p class="section-sub">Investitsiya o'sish, jamoa va foydalanuvchilarni jalb qilishga yo'naltiriladi. Mahsulot allaqachon tayyor — endi masshtab kerak.</p>
+<!-- ================= 13 · TEAM ================= -->
+<section class="slide" id="team">
+  <div class="slide-num"><b>13</b> / 14</div>
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Jamoa</span>
+      <h2 class="stitle">Loyiha <span class="gt">asoschilari</span></h2>
+      <p class="ssub">Mahsulotni o'z qo'llari bilan qurgan, bozorni ichidan biladigan yosh jamoa.</p>
+    </div>
+    <div class="founders">
+      <div class="card fcard rv">
+        <div class="av2">AX</div>
+        <h3>Xakimjonov Abduraxmon</h3>
+        <div class="role">Asoschi · Dasturchi</div>
+        <p>IntizomAI g'oyasi muallifi va texnik ishlab chiquvchisi. Bot arxitekturasi, AI integratsiyasi, gamifikatsiya dvigateli va Mini App — mustaqil ishlab chiqilgan.</p>
         <div class="pill-row">
-          <span class="pill">📣 Marketing va foydalanuvchi jalb qilish</span>
-          <span class="pill">👥 Jamoani kengaytirish</span>
-          <span class="pill">☁️ Infratuzilma va OpenAI xarajatlari</span>
-          <span class="pill">🏫 B2B sotuvlar</span>
+          <span class="pill">🤖 Full-stack</span>
+          <span class="pill">🧠 AI integratsiya</span>
+          <span class="pill">🎯 Mahsulot dizayni</span>
         </div>
       </div>
-      <div class="reveal">
-        <div class="metric-list">
-          <div class="metric-row"><span class="k">Mahsulot holati</span><span class="v grad-text">Tayyor & deploy</span></div>
-          <div class="metric-row"><span class="k">Boshlang'ich bozor</span><span class="v">4M+ yoshlar</span></div>
-          <div class="metric-row"><span class="k">Obuna narxi</span><span class="v">39 900 so'm/oy</span></div>
-          <div class="metric-row"><span class="k">Foydalanuvchi jalb narxi</span><span class="v grad-text">Past (viral)</span></div>
-          <div class="metric-row"><span class="k">O'rnatish to'sig'i</span><span class="v">0 (Telegram)</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TEAM ===================== -->
-  <section id="team" style="background:linear-gradient(180deg, transparent, rgba(109,94,252,.04), transparent);">
-    <div class="wrap">
-      <div class="reveal center">
-        <span class="eyebrow">👤 Jamoa</span>
-        <h2 class="section-title">Loyiha <span class="grad-text">asoschisi</span></h2>
-      </div>
-      <div class="card reveal">
-        <div class="founder">
-          <div class="avatar">AX</div>
-          <div>
-            <h3>Xakimjonov Abduraxmon</h3>
-            <div class="role">Asoschi & Dasturchi (Founder)</div>
-            <p>IntizomAI g'oyasi muallifi va texnik ishlab chiquvchisi. Botning to'liq arxitekturasi, AI integratsiyasi, gamifikatsiya dvigateli va Mini App — mustaqil ishlab chiqilgan. Maqsad: O'zbek yoshlarida intizom madaniyatini texnologiya orqali shakllantirish.</p>
-            <div class="pill-row" style="margin-top:12px;">
-              <span class="pill">🤖 Full-stack dasturlash</span>
-              <span class="pill">🧠 AI integratsiya</span>
-              <span class="pill">🎯 Mahsulot dizayni</span>
-            </div>
-          </div>
+      <div class="card fcard rv">
+        <div class="av2">AS</div>
+        <h3>Adxamov Asror</h3>
+        <div class="role">Asoschi · Strategiya & O'sish</div>
+        <p>Loyihaning rivojlanishi, bozorga chiqish strategiyasi va foydalanuvchilar bilan ishlash yo'nalishida asoschi. Jamoaviy intizom konsepsiyasi va o'sish rejasi ustida ishlaydi.</p>
+        <div class="pill-row">
+          <span class="pill">📈 O'sish strategiyasi</span>
+          <span class="pill">🤝 Hamkorliklar</span>
+          <span class="pill">📣 Marketing</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <span class="eyebrow">📞 Bog'lanish</span>
-        <h2>Keling, <span class="grad-text">birga quramiz</span></h2>
-        <p>Savollar, hamkorlik yoki investitsiya bo'yicha to'g'ridan-to'g'ri bog'laning. Har doim ochiqman.</p>
-        <div class="contact-card" style="max-width:720px; margin:0 auto;">
-          <a class="contact-item" href="tel:+998333134422">
-            <span class="ci">📱</span>
-            <span><span class="lbl">Telefon</span><span class="val">+998 33 313 44 22</span></span>
-          </a>
-          <a class="contact-item" href="mailto:abduraxmonxakimjonov4@gmail.com">
-            <span class="ci">✉️</span>
-            <span><span class="lbl">Email</span><span class="val">abduraxmonxakimjonov4@gmail.com</span></span>
-          </a>
-          <a class="contact-item" href="https://t.me/abduraxmon313" target="_blank" rel="noopener">
-            <span class="ci">✈️</span>
-            <span><span class="lbl">Telegram</span><span class="val">@abduraxmon313</span></span>
-          </a>
-          <a class="contact-item" href="https://instagram.com/intizomai.uz" target="_blank" rel="noopener">
-            <span class="ci">📷</span>
-            <span><span class="lbl">Instagram</span><span class="val">intizomai.uz</span></span>
-          </a>
-        </div>
-      </div>
+    <div class="card rv" style="margin-top:20px;background:var(--grad-soft);border-color:var(--border-strong)">
+      <p style="font-size:1.05rem">🎯 <b>Bizning maqsadimiz:</b> O'zbek yoshlarida intizom madaniyatini texnologiya orqali shakllantirish — bilimni natijaga aylantiradigan avlod tarbiyalash.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="wrap footer-inner">
-      <div class="brand"><span class="logo">🎯</span><span>Intizom<b>AI</b></span></div>
-      <div class="footer-links">
-        <a href="#problem">Muammo</a>
-        <a href="#solution">Yechim</a>
-        <a href="#business">Biznes model</a>
-        <a href="#contact">Bog'lanish</a>
+<!-- ================= 14 · CONTACT ================= -->
+<section class="slide" id="contact">
+  <div class="slide-num"><b>14</b> / 14</div>
+  <div class="wrap">
+    <div class="cta-band rv">
+      <img src="assets/img/logo.svg" alt="IntizomAI" style="width:66px;height:66px;border-radius:18px;margin:0 auto 16px;box-shadow:var(--glow)" />
+      <span class="eyebrow">Bog'lanish</span>
+      <h2>Keling, <span class="gt">birga quramiz</span></h2>
+      <p>Savol, hamkorlik yoki investitsiya bo'yicha to'g'ridan-to'g'ri bog'lanishingiz mumkin. Har doim ochiqmiz.</p>
+      <div class="contact-grid">
+        <a class="ci-item" href="tel:+998333134422">
+          <span class="cic">📱</span><span><span class="lbl">Telefon</span><span class="val">+998 33 313 44 22</span></span>
+        </a>
+        <a class="ci-item" href="mailto:abduraxmonxakimjonov4@gmail.com">
+          <span class="cic">✉️</span><span><span class="lbl">Email</span><span class="val">abduraxmonxakimjonov4@gmail.com</span></span>
+        </a>
+        <a class="ci-item" href="https://t.me/abduraxmon313" target="_blank" rel="noopener">
+          <span class="cic">✈️</span><span><span class="lbl">Telegram</span><span class="val">@abduraxmon313</span></span>
+        </a>
+        <a class="ci-item" href="https://instagram.com/intizomai.uz" target="_blank" rel="noopener">
+          <span class="cic">📷</span><span><span class="lbl">Instagram</span><span class="val">intizomai.uz</span></span>
+        </a>
       </div>
-      <div>© 2026 IntizomAI · Xakimjonov Abduraxmon</div>
+      <p style="margin-top:24px;font-size:.9rem;color:var(--text-dim)">Asoschilar: Xakimjonov Abduraxmon · Adxamov Asror</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="assets/js/main.js"></script>
+<footer>
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top"><img src="assets/img/logo.svg" alt="" /><span>Intizom<b>AI</b></span></a>
+    <div class="footer-links">
+      <a href="#problem">Muammo</a><a href="#demo">Mahsulot</a><a href="#model">Model</a><a href="#team">Jamoa</a>
+    </div>
+    <div>© 2026 IntizomAI · Barcha huquqlar himoyalangan</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
