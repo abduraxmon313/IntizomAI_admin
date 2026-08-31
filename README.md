@@ -23,27 +23,36 @@ IntizomAI — Gen Z va o'quvchilar uchun sun'iy intellektga asoslangan **intizom
 
 ## Ishga tushirish (lokal)
 
-Bu — oddiy statik sayt. Hech qanday build kerak emas:
+Node.js (18+) o'rnatilgan bo'lsa:
 
 ```bash
-# repo ichida
-python3 -m http.server 8080
-# brauzerda oching: http://localhost:8080
+npm start          # http://localhost:3000
 ```
 
-Yoki `index.html` faylini to'g'ridan-to'g'ri brauzerda oching.
+Yoki oddiygina `index.html` faylini brauzerda oching.
 
-## GitHub Pages'da nashr qilish
+## Railway'ga deploy qilish 🚂
 
-1. GitHub'da bu repozitoriyni oching → **Settings → Pages**
-2. **Source**: `Deploy from a branch`
-3. **Branch**: `main` (yoki tegishli branch), papka: `/ (root)`
-4. Saqlang — bir necha daqiqada sayt `https://abduraxmon313.github.io/IntizomAI_admin/` manzilida ochiladi.
+Loyiha Railway uchun to'liq sozlangan — statik saytni Node.js server orqali beradi va `$PORT` ga avtomatik ulanadi.
+
+1. [railway.app](https://railway.app) ga kiring → **New Project**
+2. **Deploy from GitHub repo** → `abduraxmon313/IntizomAI_admin` ni tanlang
+3. Railway avtomatik aniqlaydi: `npm start` → `node server.js`
+4. Deploy tugagach → **Settings → Networking → Generate Domain** bosing
+5. Railway sizga bepul domen beradi, masalan: `https://intizomai-admin-production.up.railway.app`
+
+Aynan shu havolani Yoshlar Venture arizasiga qo'yasiz. Hech qanday qo'shimcha sozlash yoki muhit o'zgaruvchisi (env) kerak emas.
+
+> **Eslatma:** Server `process.env.PORT` ni o'qiydi (Railway buni o'zi beradi) va `0.0.0.0` ga ulanadi — shuning uchun to'g'ridan-to'g'ri ishlaydi.
 
 ## Fayl tuzilishi
 
 ```
 index.html            # asosiy sahifa (barcha bo'limlar)
+server.js             # zero-dependency Node.js static server (Railway uchun)
+package.json          # start skripti
+railway.json          # Railway deploy sozlamalari
+Procfile              # zaxira start komandasi
 assets/
   css/style.css       # dizayn tizimi va layout
   js/main.js          # scroll animatsiyalari, nav
