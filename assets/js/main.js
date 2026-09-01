@@ -40,46 +40,52 @@
     });
   }
 
-  /* ---------- reveal on scroll ---------- */
-  var revs = document.querySelectorAll(".rv");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(
-      function (es) {
-        es.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
-    );
-    revs.forEach(function (el, i) {
-      el.style.transitionDelay = (i % 4) * 70 + "ms";
-      io.observe(el);
-    });
-  } else {
-    revs.forEach(function (el) { el.classList.add("in"); });
+  /* ---------- reveal on scroll (robust: content is visible by default) ----------
+     CSS only hides .rv while <body> has the "reveal-on" class. We add it here so
+     that if JS ever fails, ALL content stays visible. Then we reveal via a simple
+     scroll sweep using getBoundingClientRect — no IntersectionObserver edge cases,
+     so bottom-of-page sections can never get stuck hidden. */
+  var revs = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+  var funds = document.getElementById("funds");
+
+  function revealEl(el) {
+    if (el.classList.contains("in")) return;
+    el.classList.add("in");
+    if (el === funds) {
+      funds.querySelectorAll(".fund-row").forEach(function (r, i) {
+        setTimeout(function () { r.classList.add("in"); }, i * 140);
+      });
+    }
   }
 
-  /* ---------- use-of-funds bars animate in ---------- */
-  var funds = document.getElementById("funds");
-  if (funds && "IntersectionObserver" in window) {
-    var fio = new IntersectionObserver(
-      function (es) {
-        es.forEach(function (e) {
-          if (e.isIntersecting) {
-            funds.querySelectorAll(".fund-row").forEach(function (r, i) {
-              setTimeout(function () { r.classList.add("in"); }, i * 140);
-            });
-            fio.disconnect();
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    fio.observe(funds);
+  revs.forEach(function (el, i) {
+    el.style.transitionDelay = (i % 4) * 70 + "ms";
+  });
+  document.body.classList.add("reveal-on");
+
+  var atBottomRevealed = false;
+  function sweep() {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    for (var i = 0; i < revs.length; i++) {
+      var el = revs[i];
+      if (el.classList.contains("in")) continue;
+      var r = el.getBoundingClientRect();
+      if (r.top < vh - 40 && r.bottom > 0) revealEl(el);
+    }
+    // guarantee: once the user reaches the bottom, reveal anything still hidden
+    // (covers elements too close to the bottom to ever scroll far enough)
+    if (!atBottomRevealed &&
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      atBottomRevealed = true;
+      revs.forEach(revealEl);
+    }
   }
+  sweep();
+  window.addEventListener("scroll", sweep, { passive: true });
+  window.addEventListener("resize", sweep);
+  window.addEventListener("load", sweep);
+  // final safety net: nothing stays invisible for more than a few seconds
+  setTimeout(sweep, 1200);
 
   /* ---------- build heatmap (stats page) ---------- */
   var heat = document.getElementById("heat");
@@ -122,6 +128,7 @@
 
       // force restart of inner CSS animations by reflow
       next.classList.remove("active");
+      next.scrollTop = 0;
       void next.offsetWidth;
       next.classList.add("active");
 
