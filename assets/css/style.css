@@ -114,6 +114,62 @@ img, svg { display: block; max-width: 100%; }
   color: var(--blue-l); padding: 7px 15px; border-radius: 999px;
   background: var(--grad-soft); border: 1px solid var(--border); margin-bottom: 18px;
 }
+
+/* ---------- CHAPTER MARKER (pitch-deck slide header) ----------
+   Used above the 7 main sections (Muammo · Yechim · Mahsulot · Bozor ·
+   Model · Reja · Jamoa) to make each feel like a distinct deck slide. */
+.chapter {
+  display: flex; align-items: center; gap: 22px;
+  margin: 0 auto 44px; max-width: 780px;
+  position: relative;
+}
+.chapter .ch-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong) 60%, var(--blue-l));
+}
+.chapter .ch-line.right {
+  background: linear-gradient(90deg, var(--blue-l), var(--border-strong) 40%, transparent);
+}
+.ch-pill {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 10px 18px 10px 10px; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(23,73,224,.28), rgba(124,196,255,.16));
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 18px 42px -20px var(--blue), inset 0 1px 0 rgba(255,255,255,.08);
+  position: relative; overflow: hidden;
+}
+.ch-pill::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.22) 50%, transparent 60%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+body.reveal-on .rv.in .ch-pill::after { animation: chShine 2.6s ease-in-out .3s 1; }
+@keyframes chShine {
+  to { transform: translateX(120%); }
+}
+.ch-num {
+  display: inline-grid; place-items: center;
+  min-width: 34px; height: 34px; padding: 0 10px; border-radius: 999px;
+  background: var(--grad); color: #fff;
+  font-weight: 800; font-size: .84rem; font-variant-numeric: tabular-nums;
+  letter-spacing: .04em; box-shadow: 0 8px 20px -8px var(--blue);
+}
+.ch-name {
+  font-weight: 800; font-size: 1.02rem; letter-spacing: .22em;
+  text-transform: uppercase; color: #fff;
+}
+.ch-tag {
+  font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--blue-l); opacity: .85;
+  padding-left: 12px; border-left: 1px solid var(--border-strong);
+}
+@media (max-width: 680px) {
+  .chapter { gap: 12px; margin-bottom: 32px; }
+  .chapter .ch-line { display: none; }
+  .ch-name { font-size: .9rem; letter-spacing: .18em; }
+  .ch-tag  { display: none; }
+}
 h1, h2, h3, h4 { letter-spacing: -.03em; line-height: 1.12; font-weight: 800; }
 .stitle { font-size: clamp(1.75rem, 4vw, 2.85rem); margin-bottom: 14px; }
 .ssub { color: var(--text-soft); font-size: 1.04rem; max-width: 660px; margin-bottom: 42px; }
