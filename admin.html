@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IntizomAI · Admin panel</title>
+<meta name="description" content="IntizomAI mini admin paneli — logo boshqaruvi (PostgreSQL)." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#03060f" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/admin.css" />
+<link rel="icon" type="image/svg+xml" href="/logo" />
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<main class="admin-shell">
+  <header class="admin-top">
+    <a class="brand" href="/">
+      <img src="/logo" alt="IntizomAI" id="brandLogo" />
+      <span>Intizom<b>AI</b> · <em>admin</em></span>
+    </a>
+    <a class="back" href="/">← Saytga qaytish</a>
+  </header>
+
+  <!-- ============== LOGIN ============== -->
+  <section class="card" id="loginCard" hidden>
+    <div class="lock">🔐</div>
+    <h1>Admin panel</h1>
+    <p class="sub">Kirish uchun parolni kiriting. Faqat sayt egasi uchun.</p>
+    <form id="loginForm" autocomplete="off">
+      <label class="field">
+        <span>Parol</span>
+        <input type="password" id="password" name="password" required autofocus autocomplete="current-password" />
+      </label>
+      <button class="btn primary" type="submit" id="loginBtn">Kirish →</button>
+      <div class="msg" id="loginMsg"></div>
+    </form>
+    <p class="hint">Parol Railway sozlamalarida <code>ADMIN_PASSWORD</code> o'zgaruvchisi orqali beriladi.</p>
+  </section>
+
+  <!-- ============== PANEL ============== -->
+  <section class="card" id="panelCard" hidden>
+    <div class="panel-head">
+      <div>
+        <span class="eyebrow">Logo boshqaruvi</span>
+        <h1>Sayt logotipi</h1>
+        <p class="sub">Yuklangan logo PostgreSQL bazasida saqlanadi va saytning barcha sahifalarida darhol paydo bo'ladi.</p>
+      </div>
+      <button class="btn ghost small" id="logoutBtn" type="button">Chiqish</button>
+    </div>
+
+    <div class="db-status" id="dbStatus"></div>
+
+    <div class="logo-stage">
+      <div class="preview" id="preview">
+        <div class="ph">
+          <span class="spin"></span>
+          <span>yuklanmoqda…</span>
+        </div>
+      </div>
+      <div class="preview-meta" id="previewMeta">—</div>
+    </div>
+
+    <label class="dropzone" id="dropzone">
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <div class="dz-inner">
+        <div class="dz-ic">⬆</div>
+        <div class="dz-t">Rasmni bu yerga tashlang yoki bosing</div>
+        <div class="dz-s">PNG · JPG · SVG · WEBP · max 4 MB</div>
+      </div>
+    </label>
+
+    <div class="actions">
+      <button class="btn primary" id="uploadBtn" type="button" disabled>💾 DB ga saqlash</button>
+      <button class="btn ghost" id="removeBtn" type="button">🗑 O'chirish</button>
+    </div>
+    <div class="msg" id="panelMsg"></div>
+  </section>
+</main>
+
+<footer class="admin-foot">
+  © 2026 IntizomAI · admin
+</footer>
+
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>
